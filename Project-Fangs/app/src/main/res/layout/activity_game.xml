@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity"
+    android:background="@drawable/gamebgr">
+
+    <!-- LEVEL NUMBER -->
+    <TextView
+        android:id="@+id/txtLevelNumber"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/level_number"
+        android:fontFamily="@font/almendra"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/darker_crimson"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        />
+
+    <!-- LEVEL PROGRESS -->
+    <ProgressBar
+        android:id="@+id/pbLevel"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="300dp"
+        android:layout_height="25dp"
+        android:layout_toEndOf="@id/txtLevelNumber"
+        android:layout_alignTop="@id/txtLevelNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="-3dp"
+        android:max="100"
+        android:layout_marginTop="18dp"
+        android:progressDrawable="@drawable/progress_level"/>
+
+    <!-- VAMPIRE RANK -->
+    <TextView
+        android:id="@+id/txtRank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtLevelNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/almendra_bold"
+        android:text="Fledgling"
+        android:textColor="@color/black"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        android:shadowColor="@color/red"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="20"/>
+
+    <!-- VAMPIRE IMAGE -->
+    <ImageView
+        android:id="@+id/ImageFangs"
+        android:layout_width="270dp"
+        android:layout_height="230dp"
+        android:layout_below="@id/txtRank"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" />
+
+    <!-- THIRST FRAME -->
+    <FrameLayout
+        android:id="@+id/frameThirst"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/ImageFangs"
+        android:layout_marginTop="20dp">
+
+        <!-- THIRST PROGRESS BAR-->
+        <ProgressBar
+            android:id="@+id/pbThirst"
+            android:layout_width="330dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_below="@id/ImageFangs"
+            android:layout_gravity="center"
+            android:max="100"
+            android:progressDrawable="@drawable/progress_thirst"/>
+
+        <!-- THIRST PROGRESS TEXT-->
+            <TextView
+                android:id="@+id/txtThirstValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Thirst: 0/100"
+                android:textColor="@color/black"
+                android:fontFamily="@font/almendra_sc"
+                android:textSize="16sp"/>
+    </FrameLayout>
+
+    <!-- AUTHORITY FRAME -->
+    <FrameLayout
+        android:id="@+id/frameAuthority"
+        android:layout_width="match_parent"
+        android:layout_below="@id/frameThirst"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp">
+
+    <!-- AUTHORITY LEVEL NUMBER -->
+        <TextView
+            android:id="@+id/txtAuthorityLevel"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/authority_level"
+            android:layout_toEndOf="@id/txtAuthorityLevel"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            android:text="0"
+            android:gravity="center"
+            android:fontFamily="@font/almendra"
+            android:textColor="@color/gold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="1dp"/>
+
+    <!-- AUTHORITY PROGRESS BAR -->
+        <ProgressBar
+            android:id="@+id/pbAuthority"
+            android:layout_width="310dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_toEndOf="@id/txtAuthorityLevel"
+            android:max="100"
+            android:layout_gravity="center"
+            android:progressDrawable="@drawable/progress_authority"
+            android:layout_marginLeft="9dp"/>
+
+        <!-- AUTHORITY PROGRESS TEXT -->
+        <TextView
+            android:id="@+id/txtAuthorityValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Authority: 0/100"
+            android:textColor="@color/black"
+            android:fontFamily="@font/almendra_sc"
+            android:textSize="16sp"/>
+
+    </FrameLayout>
+
+    <!-- WISDOM FRAME -->
+    <FrameLayout
+        android:id="@+id/frameWisdom"
+        android:layout_width="match_parent"
+        android:layout_below="@id/frameAuthority"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp">
+
+        <!-- WISDOM LEVEL NUMBER -->
+        <TextView
+            android:id="@+id/txtWisdomLevel"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:layout_below="@id/txtAuthorityLevel"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/wisdom_level"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            android:text="0"
+            android:gravity="center"
+            android:fontFamily="@font/almendra"
+            android:textColor="@color/gold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="1dp"/>
+
+        <!-- WISDOM PROGRESS BAR-->
+        <ProgressBar
+            android:id="@+id/pbWisdom"
+            android:layout_width="310dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_toEndOf="@id/txtWisdomLevel"
+            android:max="100"
+            android:progressDrawable="@drawable/progress_wisdom"
+            android:layout_gravity="center"
+            android:layout_marginLeft="9dp"/>
+
+        <!-- WISDOM PROGRESS TEXT-->
+        <TextView
+            android:id="@+id/txtWisdomValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Wisdom: 0/100"
+            android:textColor="@color/black"
+            android:fontFamily="@font/almendra_sc"
+            android:textSize="16sp"/>
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/btnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="3"
+        android:layout_marginTop="10dp">
+
+        <!-- STUDY BUTTON -->
+        <Button
+            android:id="@+id/studyBtn"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/study_btn"
+            android:contentDescription="Study"
+            android:fontFamily="@font/almendra_bold"
+            android:gravity="center"
+            android:src="@drawable/study_btn_img"
+            app:backgroundTint="@null"
+            app:icon="@drawable/study_btn_img"
+            app:iconGravity="textStart"
+            app:iconSize="130dp"
+            app:iconTint="@null"
+            app:iconTintMode="multiply" />
+
+        <!-- DRINK BUTTON -->
+        <Button
+            android:id="@+id/thirstBtn"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/thirst_btn"
+            android:fontFamily="@font/almendra_bold"
+            app:backgroundTint="@null"
+            app:icon="@drawable/thirst_btn_img"
+            app:iconGravity="top"
+            app:iconSize="110dp"
+            app:iconTint="@null"
+            app:iconTintMode="multiply" />
+
+        <!-- MAKE DECISIONS BUTTON -->
+        <Button
+            android:id="@+id/authorityBtn"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/decide_btn"
+            android:fontFamily="@font/almendra_bold"
+            app:backgroundTint="@null"
+            app:icon="@drawable/decide_btn_img"
+            app:iconGravity="textEnd"
+            app:iconSize="120dp"
+            app:iconTint="@null"
+            app:iconTintMode="multiply" />
+
+    </LinearLayout>
+
+    <!-- EVOLVE BUTTON -->
+    <Button
+        android:id="@+id/evolveBtn"
+        android:layout_width="160dp"
+        android:layout_height="95dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:text="Evolve"
+        android:textSize="25sp"
+        android:fontFamily="@font/almendra"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:backgroundTint="@null"
+        android:background="@drawable/evolve_btn"/>
+
+</android.widget.RelativeLayout>
