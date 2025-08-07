@@ -1,4 +1,4 @@
-# FANGS! Road to Power
+# FANGS! Road to Power 🦇
 
 **Fangs!** is a vampire themed clicker-game of my own creating. Heavy inspiration are from *V-Rising*, *Pou* and *INTTI denssi-clicker*.
 
