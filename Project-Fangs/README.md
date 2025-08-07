@@ -26,6 +26,22 @@ You evolve every **10 levels**, by clicking the **Evolve** button.
 
 The game is fairly short and ends once everything reaches **level 50**.
 
+### 👑 Achievements
+
+Achievements are locked and their information hidden in the beginning of the game. <br>
+You will naturally unlock them as you play! <br>
+There are 9 achivements in total:
+
+- **First Evolve!**
+- **Novice!**
+- **Part of the High Society**
+- **Reaching for the Throne!**
+- **The Crown is Yours!**
+- **Learning the Politics!**
+- **Scholar!**
+- **Judge of them All!**
+- **Academic Weapon!**
+
 ## ⚙️ Installation
 1. Download **Project-Fangs respository** from GitHub as **ZIP-file**.
 2. Unzip it in file explorer.
