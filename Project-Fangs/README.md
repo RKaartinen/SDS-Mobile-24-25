@@ -34,7 +34,7 @@ There are 9 achivements in total:
 
 - **First Evolve!**
 - **Novice!**
-- **Part of the High Society**
+- **Part of the High Society!**
 - **Reaching for the Throne!**
 - **The Crown is Yours!**
 - **Learning the Politics!**
